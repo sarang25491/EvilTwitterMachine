@@ -13,13 +13,8 @@ def login(usern, passwd)
 	page = agent.get('https://mobile.twitter.com/session/new')
 	form = page.form_with(:action => 'https://mobile.twitter.com/session')
 
-	# Our form's fields' names are session[username_or_email]
-	# And session[password]. How do we access them?
-	#
-	# form['session[username_or_email]'] is the answer!
-
-	form['session[username_or_email]'] = usern
-	form['session[password]'] = passwd
+        form.username = usern
+        form.password = passwd
 
 	timeline = form.submit # And we return the (possible) timeline
 end

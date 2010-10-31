@@ -64,6 +64,11 @@ File.open("loginlist", "r").each do |line|
 	usern  = getUsern(line)
 	passwd = getPasswd(line)
 	timeline = login(usern, passwd)
+
+        puts timeline.class
+        puts timeline.title
+        timeline.forms.each { |t| t.fields.each { |f| puts f.name } }
+
 	runPlugin("dummie", timeline)
 	logout
 end
