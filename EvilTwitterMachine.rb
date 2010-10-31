@@ -31,6 +31,22 @@ require './common/login'
 require './common/logout'
 require './common/attackparser'
 
+#########################
+# PARSER: getUsern	#
+#########################
+
+def getUsern(line)
+	line.split(' ')[0]
+end
+
+#########################
+# PARSER: getPasswd	#
+#########################
+
+def getPasswd(line)
+	line.split(' ')[1]
+end
+
 # Let's parse the login list
 #################################
 # TODO: parse any file.		#
@@ -52,18 +68,4 @@ File.open("loginlist", "r").each do |line|
 	logout
 end
 
-#########################
-# PARSER: getUsern	#
-#########################
 
-def getUsern(line)
-	line.split(' ')[0]
-end
-
-#########################
-# PARSER: getPasswd	#
-#########################
-
-def getPasswd(line)
-	line.split(' ')[1]
-end
