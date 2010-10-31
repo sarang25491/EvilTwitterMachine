@@ -1,0 +1,11 @@
+GEM
+  specs:
+    mechanize (1.0.0)
+      nokogiri (>= 1.2.1)
+    nokogiri (1.4.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mechanize
