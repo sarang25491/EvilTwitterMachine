@@ -1,4 +1,4 @@
-#!/usr/bin/ENV ruby
+#!/usr/bin/env ruby
 
 #################################################################
 #			EvilTwitterMachine			#
@@ -27,9 +27,9 @@
 require 'rubygems'
 require 'mechanize'
 
-require 'common/login.rb'
-require 'common/logout.rb'
-require 'common/attackparser.rb'
+require './common/login'
+require './common/logout'
+require './common/attackparser'
 
 # Let's parse the login list
 #################################
